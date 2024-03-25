@@ -9,6 +9,15 @@
 2. Copy the configuration file from this repository as `~/.tmux.conf` or `XDG_CONFIG_HOME/tmux/tmux.conf`
 
    ```bash
+   # For symlink
+   mkdir ~/.config/tmux
+   git clone https://github.com/Aadmi1234/my-tmux-config.git
+   ln -s my-tmux-config/tmux.conf ~/.config/tmux/tmux.conf
+   ```
+
+   <p style="text-align: center;">OR</p>
+
+   ```bash
    cd ~
    curl -L https://raw.githubusercontent.com/Aadmi1234/my-tmux-config/master/tmux.conf | > .tmux.conf
    ```
@@ -21,7 +30,7 @@
    curl -L https://raw.githubusercontent.com/Aadmi1234/my-tmux-config/master/tmux.conf | > tmux.conf
    ```
 
-3. Download [**TPM**](https://github.com/tmux-plugins/tpm) to install and load **TMUX** plugins.
+4. Download [**TPM**](https://github.com/tmux-plugins/tpm) to install and load **TMUX** plugins.
 
    Clone TPM :
 
@@ -29,7 +38,7 @@
    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
    ```
 
-4. Reload TMUX environment so TPM is sourced, type this in terminal if tmux is already running :
+5. Reload TMUX environment so TPM is sourced, type this in terminal if tmux is already running :
 
    ```bash
    tmux source-file ~/.tmux.conf
@@ -41,12 +50,12 @@
    tmux source-file ~/.config/tmux/tmux.conf
    ```
 
-5. To install the existing plugins :
+6. To install the existing plugins :
 
    - Press `prefix` + <kbd>I</kbd> , to fetch the plugin.
    - The plugin was cloned to `~/.tmux/plugins` dir and sourced.
 
-6. To install new plugins :
+7. To install new plugins :
 
    - See the instruction [here](https://github.com/tmux-plugins/tpm#installation).
    - See the list of plugins [here](https://github.com/tmux-plugins/list).
